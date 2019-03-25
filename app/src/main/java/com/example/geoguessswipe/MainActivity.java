@@ -66,9 +66,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerView.OnIt
                     public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
                         int position = (viewHolder.getAdapterPosition());
                         if(mGeoObjects.get(position).getmGeoName().equals("Denmark") || mGeoObjects.get(position).getmGeoName().equals("Kazakhstan") || mGeoObjects.get(position).getmGeoName().equals("Poland") || mGeoObjects.get(position).getmGeoName().equals("Malta")){
-                            Toast.makeText((Context) mGeoObjects.get(position).getmGeoName(),"Is in Europe", Toast.LENGTH_SHORT).show();
+                            Toast.makeText( MainActivity.this ,mGeoObjects.get(position).getmGeoName() + "Is in Europe", Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText((Context) mGeoObjects.get(position).getmGeoName(),"Is not in Europe", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this ,mGeoObjects.get(position).getmGeoName() + "Is not in Europe", Toast.LENGTH_SHORT).show();
                         }
                     }
                 };
